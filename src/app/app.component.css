@@ -1,0 +1,13 @@
+.background{
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://i.postimg.cc/2SmdVh3H/sear.jpg");
+    height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  background-attachment: fixed;
+    
+
+   
+}

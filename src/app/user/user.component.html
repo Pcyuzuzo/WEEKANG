@@ -1,0 +1,53 @@
+<div class="container">
+ 
+  <div class="row ">
+    <div class="col-md-12">
+      <app-form (getName)='findUser($event)'></app-form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="table table-striped table-bordered">
+        <h3>{{users.name}}</h3>
+        
+              <p scope="row" style="color: white;">Github Username:
+              <a href="{{users.html_url}}" target="_blank">{{users.login|upper}}</a> </p>
+              
+              <p scope="row" style="color: white;">Repositories:
+              {{users.public_repos }}</p>
+          
+              <p scope="row" style="color: white;">Date created:
+              {{users.created_at | date|upper}}</p>
+            
+              <p scope="row" style="color: white;">Followers:
+              {{users.followers}}</p>
+            
+              <p scope="row" style="color: white;">Following:
+              {{users.following}}</p>
+      </div>
+    </div>
+    <div class="col-md-5 image-start">
+      <img src="{{users.avatar_url}}">
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="container">
+  <div class="row">
+    <div  class="col-md-12">
+      <div class="table table-striped">
+        <table class="table">
+          <tbody>
+            <tr *ngFor='let repository of userRepos.newRepository'>
+              <td>
+                <a href="{{repository.html_url}}" target="_blank"  >{{repository.name}}</a><br>
+                  <p class="desc" style="color: white;">Description: {{repository.description}}</p><br>
+                  <p style="color: white;"> Date Created: {{repository.created_at | date}}</p>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

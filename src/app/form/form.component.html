@@ -1,0 +1,10 @@
+<h1 style="color: white; text-align: center;">Welcome to Github username Search</h1>
+<p style="color: white; text-align: center;">Let's help you to search every github username and Repository by typing any github username you know and get to view it's Repositories!</p>
+<form (ngSubmit)="searchFor(searchForm)" #searchForm="ngForm">
+    <div class="form-group" style="margin-right: 50%; margin-top: 5%">
+      <input  type="text" class="form-control" name="find" placeholder="Enter github username here....."[(ngModel)]= "searchInfo.find"  #find='ngModel'>
+      <button type="submit" class="btn btn-success" style="background-color:rgb(12, 125, 163);"> Search</button>
+
+    </div>
+  </form>
+  
